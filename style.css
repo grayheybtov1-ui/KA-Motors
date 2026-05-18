@@ -2851,6 +2851,14 @@ img {
     gap: 16px;
   }
   
+  /* Force headlights on for touch/mobile screens */
+  .hero-car-preview.hover-img {
+    opacity: 1 !important;
+  }
+  .hero-car-preview.base-img {
+    opacity: 0 !important;
+  }
+  
   .section {
     padding: 60px 0;
   }
