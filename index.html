@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAİ Motors - Premium Avtomobil Satışı və Konfiquratoru</title>
+  <meta name="description" content="KAİ Motors premium və elektrikli avtomobillərin satışı. Öz avtomobilinizi yaradın, test sürüşü sifariş edin və premium komfortu hiss edin.">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons CDN for sleek vector iconography -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- --- Backdrop overlay for drawers and modals --- -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo-container">
+        <!-- Embedded SVG logo directly in header -->
+        <svg class="logo" viewBox="0 0 500 500">
+          <g fill="currentColor">
+            <path d="M 60 120 L 110 120 L 110 290 L 60 290 Z" />
+            <path d="M 110 205 L 210 120 L 275 120 L 160 215 L 110 205 Z" />
+            <path d="M 150 205 L 265 290 L 200 290 L 110 220 L 110 205 Z" />
+            <path d="M 270 120 L 335 120 L 400 290 L 345 290 L 302.5 175 L 260 290 L 210 290 L 270 120 Z" />
+            <path d="M 410 120 L 460 120 L 460 290 L 410 290 Z" />
+          </g>
+          <text x="250" y="360" font-family="'Outfit', sans-serif" font-size="54" font-weight="900" font-style="italic" letter-spacing="9" text-anchor="middle" fill="currentColor">MOTORS</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Ana Səhifə</a>
+        <a href="#about" class="nav-link">Haqqımızda</a>
+        <a href="#catalog" class="nav-link">Kataloq</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Əlaqə</a>
+      </nav>
+
+      <!-- Action Buttons (Favorites, Comparison, Bookings) -->
+      <div class="header-actions">
+        <!-- Active Bookings Panel Toggle -->
+        <button class="btn-icon badge-wrapper" id="bookingsToggleBtn" title="Rezervasiyalarım">
+          <i data-lucide="calendar"></i>
+          <span class="badge" id="bookingsBadge">0</span>
+        </button>
+
+        <!-- Favorites Panel Toggle -->
+        <button class="btn-icon badge-wrapper" id="favoritesToggleBtn" title="Sevimlilər">
+          <i data-lucide="heart"></i>
+          <span class="badge" id="favoritesBadge">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       HERO SECTION (Flagship Showcase)
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-media">
+      <div class="hero-video-overlay"></div>
+      <video class="hero-video-bg" autoplay loop muted playsinline>
+        <source src="video/video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Etibarlı Seçim —
+            <span>KAI Motors</span>
+          </h1>
+          <p class="hero-description">
+            Salonumuzda hər kəs arzuladığı avtomobili tapacaq biz isə peşəkar məsləhət və çevik alış şərtlərini təqdim edəcəyik!
+          </p>
+          <div class="hero-cta">
+            <a href="#catalog" class="btn btn-primary">
+              <i data-lucide="compass"></i>
+              Kataloqu Kəşf Et
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-glow"></div>
+          <div class="hero-visual-card">
+            <!-- Dynamic interactive hover headlights container -->
+            <div class="hero-car-preview-container">
+              <img class="hero-car-preview base-img" src="hero-car-dark.jpg" alt="KAİ Spectre Sports Coupe Dark">
+              <img class="hero-car-preview hover-img" src="hero-car-lights.png" alt="KAİ Spectre Sports Coupe Lights On">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ABOUT US SECTION (Haqqımızda)
+       ========================================== -->
+  <section class="section" id="about" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Etibarlı Tərəfdaşınız</span>
+        <h2 class="section-title">KAİ Motors <span>Haqqında</span></h2>
+      </div>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; margin-top: 40px;">
+        <!-- Left Side: Showroom Photo -->
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-card); height: 420px;">
+          <img src="about-car.jpg" alt="KAİ Motors VIP Showroom" style="width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(5,6,10,0) 50%, rgba(5,6,10,0.8) 100%);"></div>
+          <div style="position: absolute; bottom: 30px; left: 30px;">
+            <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-primary); background: rgba(0, 229, 255, 0.1); padding: 6px 14px; border-radius: var(--radius-full); border: 1px solid rgba(0, 229, 255, 0.2);">VIP Bakı Showroom</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Content and Stats -->
+        <div style="display: flex; flex-direction: column; gap: 28px;">
+          <h3 style="font-family: var(--font-display); font-size: 28px; font-weight: 700; line-height: 1.3;">Avtomobil Sənayesində <span style="background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Yeni Dövrün</span> Pioneri</h3>
+          <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7; margin: 0;">
+            Biz sizə qabaqcıl texnologiya, əla qənaət və sərfəli qiymətləri özündə birləşdirən ən müasir və dəbli Çin avtomobillərini təklif edirik. Salonumuzda hər kəs arzuladığı avtomobili tapacaq biz isə peşəkar məsləhət və çevik alış şərtlərini təqdim edəcəyik!
+          </p>
+          <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7; margin: 0;">
+            Salonumuza gəlməklə siz Çin avtomobil sənayesinin keyfiyyətini hiss edəcəksiniz!
+          </p>
+
+          <!-- Achievement Numbers Grid -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 15px; border-top: 1px solid var(--border-light); padding-top: 30px;">
+            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">10+</h4>
+              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">İllik Təcrübə</p>
+            </div>
+            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">1000+</h4>
+              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">Razı Müştəri</p>
+            </div>
+            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">5 İl</h4>
+              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">Rəsmi Zəmanət</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       CAR CATALOG SECTION
+       ========================================== -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Avtomobil Parkımız</span>
+        <h2 class="section-title">Eksklüziv <span>Modellərimiz</span></h2>
+      </div>
+
+      <!-- Interactive Search & Filtering -->
+      <div class="catalog-controls">
+        <div class="control-group">
+          <span class="control-label">Axtarış</span>
+          <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input type="text" class="search-input" id="catalogSearch" placeholder="Model axtarın (məs. Spectre)...">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">Kateqoriya</span>
+          <select class="select-filter" id="categoryFilter">
+            <option value="all">Hamısı</option>
+            <option value="electric">Elektrikli Superkarlar</option>
+            <option value="hybrid">Hibrid Hyperkarlar</option>
+            <option value="suv">Premium SUV</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <span class="control-label">Sıralama</span>
+          <select class="select-filter" id="sortFilter">
+            <option value="default">Varsayılan</option>
+            <option value="price-asc">Qiymət: Ucuzdan Bahaya</option>
+            <option value="price-desc">Qiymət: Bahadan Ucuza</option>
+            <option value="hp-desc">Güc: Çoxdan Aza</option>
+          </select>
+        </div>
+
+        <div class="control-group" style="justify-content: flex-end;">
+          <button class="btn btn-secondary" id="resetFiltersBtn">
+            <i data-lucide="rotate-ccw"></i> Təmizlə
+          </button>
+        </div>
+      </div>
+
+      <!-- Catalog Cards Grid (Populated dynamically) -->
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       COMPARE STICKY BAR
+       ========================================== -->
+  <div class="compare-sticky-bar" id="compareBar">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <i data-lucide="git-compare" style="color: var(--accent-primary);"></i>
+      <span style="font-weight: 700;">Müqayisə Paneli (<span id="compareCount">0</span>/3)</span>
+    </div>
+    <div class="compare-tray" id="compareTray">
+      <!-- Compare Slots (Populated dynamically) -->
+    </div>
+    <div class="compare-actions">
+      <button class="btn btn-primary" id="compareNowBtn">
+        <i data-lucide="git-compare"></i> Müqayisə Et
+      </button>
+      <button class="btn-icon" id="clearCompareBtn" title="Təmizlə">
+        <i data-lucide="trash-2"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       INTERACTIVE CAR CONFIGURATOR
+       ========================================== -->
+  <section class="section" id="configurator" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Özün Dizayn Et</span>
+        <h2 class="section-title">Öz <span>KAİ Spectre</span>-ni Yarat</h2>
+      </div>
+
+      <div class="configurator-panel">
+        <!-- 1. Left Side: Real-time Visual Representation -->
+        <div class="configurator-visual-area">
+          <div class="configurator-car-display" id="configuratorCarDisplay">
+            <!-- Inline SVG model so we can style and animate inner nodes via JS/CSS -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%" height="100%">
+              <defs>
+                <radialGradient id="carShadow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(0, 0, 0, 0.6)" />
+                  <stop offset="70%" stop-color="rgba(0, 0, 0, 0.2)" />
+                  <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
+                </radialGradient>
+                <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+                  <stop offset="40%" stop-color="#334155" stop-opacity="0.9" />
+                  <stop offset="50%" stop-color="#94a3b8" stop-opacity="0.6" />
+                  <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
+                </linearGradient>
+                <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="30%" stop-color="#cbd5e1" />
+                  <stop offset="50%" stop-color="#64748b" />
+                  <stop offset="70%" stop-color="#e2e8f0" />
+                  <stop offset="100%" stop-color="#475569" />
+                </linearGradient>
+                <linearGradient id="headlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="20%" stop-color="#e0f2fe" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="taillightGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+                  <stop offset="0%" stop-color="#ff0000" />
+                  <stop offset="50%" stop-color="#ef4444" />
+                  <stop offset="100%" stop-color="#991b1b" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+            
+              <!-- Ground Shadow -->
+              <ellipse cx="400" cy="305" rx="350" ry="25" fill="url(#carShadow)" />
+            
+              <!-- Neon Underglow (Interactive) -->
+              <ellipse id="cfg-underglow" cx="400" cy="300" rx="270" ry="12" fill="#00e5ff" opacity="0" filter="blur(8px)" style="transition: fill 0.4s ease, opacity 0.4s ease;" />
+            
+              <!-- Main Car Group -->
+              <g id="full-car">
+                <circle cx="210" cy="270" r="50" fill="#090d16" />
+                <circle cx="590" cy="270" r="50" fill="#090d16" />
+            
+                <!-- Car Paint Body -->
+                <path id="cfg-body-paint" d="
+                  M 90 270 
+                  L 100 240 
+                  C 105 220, 110 200, 130 185
+                  C 150 170, 185 160, 240 140
+                  C 270 130, 310 95, 380 90
+                  C 440 85, 520 90, 580 120
+                  C 610 135, 660 160, 690 190
+                  C 710 210, 730 220, 740 245
+                  C 745 260, 730 275, 715 280
+                  L 670 282
+                  C 665 250, 635 225, 590 225
+                  C 545 225, 515 250, 510 282
+                  L 290 282
+                  C 285 250, 255 225, 210 225
+                  C 165 225, 135 250, 130 282
+                  L 105 280
+                  C 95 278, 90 275, 90 270 Z" 
+                  fill="#00e5ff" 
+                  style="transition: fill 0.5s ease;"
+                />
+            
+                <path d="M 700 192 C 720 188, 735 185, 745 188 C 750 190, 748 198, 730 205 Z" fill="#090d16" opacity="0.8"/>
+            
+                <!-- Windows -->
+                <path d="
+                  M 260 148
+                  C 290 138, 320 115, 380 110
+                  C 430 106, 490 110, 540 132
+                  C 560 142, 575 155, 585 168
+                  L 480 168
+                  L 380 168
+                  L 260 168 Z" 
+                  fill="url(#windowGrad)" 
+                  stroke="#1e293b" 
+                  stroke-width="2" 
+                />
+                
+                <path d="M 370 110 L 380 110 L 385 168 L 375 168 Z" fill="#090d16" />
+                <path d="M 480 112 L 490 114 L 485 168 L 475 168 Z" fill="#090d16" />
+                <path d="M 260 148 L 270 145 L 290 168 L 280 168 Z" fill="#090d16" />
+            
+                <path d="M 255 150 C 295 136, 335 108, 385 106 C 445 104, 515 108, 575 134 C 590 142, 600 152, 608 168 L 600 168 C 592 154, 582 146, 570 138 C 510 112, 442 108, 385 110 C 335 112, 290 138, 255 150" fill="url(#chromeGrad)" />
+            
+                <!-- Panels & Lines -->
+                <path d="M 120 220 Q 280 200, 500 200 T 710 225" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25" />
+                <path d="M 220 250 L 500 250 Q 505 240, 510 235" fill="none" stroke="#000000" stroke-width="2" opacity="0.4" />
+                <path d="M 220 251 L 500 251 Q 505 242, 510 236" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.15" />
+                <path d="M 380 110 L 380 275" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.35" />
+                <path d="M 275 168 C 275 220, 270 250, 260 278" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.35" />
+                <path d="M 505 168 C 510 200, 520 240, 525 278" fill="none" stroke="#000000" stroke-width="1.5" opacity="0.35" />
+            
+                <!-- Door Handles -->
+                <rect x="350" y="180" width="22" height="6" rx="3" fill="url(#chromeGrad)" stroke="#090d16" stroke-width="0.5" />
+                <rect x="475" y="182" width="22" height="6" rx="3" fill="url(#chromeGrad)" stroke="#090d16" stroke-width="0.5" />
+                <circle cx="650" cy="165" r="10" fill="none" stroke="#000000" stroke-width="1" opacity="0.35" />
+            
+                <!-- Lights -->
+                <path d="M 92 235 C 100 230, 115 225, 125 225 L 122 235 C 115 238, 102 242, 92 235 Z" fill="#ffffff" />
+                <path id="cfg-headlight-beam" d="M 92 235 L 10 210 L 10 270 L 92 238 Z" fill="url(#headlightGrad)" opacity="0" style="transition: opacity 0.4s ease;" />
+                <path d="M 735 205 C 738 200, 742 200, 745 204 L 738 215 C 735 212, 734 208, 735 205 Z" fill="#ff3333" filter="drop-shadow(0 0 3px #ff0000)" />
+                <path d="M 700 215 H 738 L 735 219 H 705 Z" fill="#ff0000" />
+                <path id="cfg-taillight-beam" d="M 740 205 L 790 200 L 790 230 L 738 215 Z" fill="url(#taillightGrad)" opacity="0" style="transition: opacity 0.4s ease;" />
+                
+                <path d="M 90 260 H 120 L 115 272 H 95 Z" fill="#090d16" />
+                <path d="M 710 265 L 732 263 L 730 273 L 712 273 Z" fill="#090d16" />
+            
+                <!-- Wheels (Grouped for rotation) -->
+                <g id="cfg-front-wheel" style="transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: 210px 270px;">
+                  <circle cx="210" cy="270" r="48" fill="#1e293b" stroke="#0f172a" stroke-width="12" />
+                  <circle cx="210" cy="270" r="41" fill="#090d16" />
+                  <circle cx="210" cy="270" r="28" fill="#64748b" opacity="0.8" />
+                  <path d="M 190 252 C 190 248, 205 242, 215 248 L 210 258 C 205 256, 195 258, 190 252 Z" fill="#ff0055" />
+                  
+                  <!-- Rim graphic -->
+                  <g id="cfg-front-rim" stroke="url(#chromeGrad)" stroke-width="2.5" fill="none">
+                    <circle cx="210" cy="270" r="32" stroke-width="3" />
+                    <!-- Spoke Pattern A -->
+                    <g id="cfg-rim-spokes">
+                      <line x1="210" y1="270" x2="210" y2="238" />
+                      <line x1="210" y1="270" x2="210" y2="302" />
+                      <line x1="210" y1="270" x2="178" y2="270" />
+                      <line x1="210" y1="270" x2="242" y2="270" />
+                      <line x1="210" y1="270" x2="187" y2="247" />
+                      <line x1="210" y1="270" x2="233" y2="293" />
+                      <line x1="210" y1="270" x2="187" y2="293" />
+                      <line x1="210" y1="270" x2="233" y2="247" />
+                    </g>
+                    <circle cx="210" cy="270" r="10" fill="#090d16" stroke-width="2" />
+                    <circle cx="210" cy="270" r="3" fill="#cbd5e1" />
+                  </g>
+                </g>
+            
+                <g id="cfg-rear-wheel" style="transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-origin: 590px 270px;">
+                  <circle cx="590" cy="270" r="48" fill="#1e293b" stroke="#0f172a" stroke-width="12" />
+                  <circle cx="590" cy="270" r="41" fill="#090d16" />
+                  <circle cx="590" cy="270" r="28" fill="#64748b" opacity="0.8" />
+                  <path d="M 570 252 C 570 248, 585 242, 595 248 L 590 258 C 585 256, 575 258, 570 252 Z" fill="#ff0055" />
+                  
+                  <g id="cfg-rear-rim" stroke="url(#chromeGrad)" stroke-width="2.5" fill="none">
+                    <circle cx="590" cy="270" r="32" stroke-width="3" />
+                    <use href="#cfg-rim-spokes" x="380" />
+                    <circle cx="590" cy="270" r="10" fill="#090d16" stroke-width="2" />
+                    <circle cx="590" cy="270" r="3" fill="#cbd5e1" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Live Performance Stats Overlay -->
+          <div class="configurator-stats-overlay">
+            <div class="config-stat-box">
+              <div class="config-stat-title">Maks. Sürət</div>
+              <div class="config-stat-value" id="cfgStatSpeed">320 km/s</div>
+            </div>
+            <div class="config-stat-box">
+              <div class="config-stat-title">0-100 km/s</div>
+              <div class="config-stat-value" id="cfgStatAccel">2.1 s</div>
+            </div>
+            <div class="config-stat-box">
+              <div class="config-stat-title">Güc</div>
+              <div class="config-stat-value" id="cfgStatPower">750 a.g.</div>
+            </div>
+            <div class="config-stat-box">
+              <div class="config-stat-title">Məsafə</div>
+              <div class="config-stat-value" id="cfgStatRange">650 km</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Right Side: Controls and Paint Picks -->
+        <div class="configurator-options-area">
+          <div>
+            <h3 class="config-section-title">Gödəkcə Rəngi <span id="colorName">Sian Mavisi</span></h3>
+            <div class="color-picker-grid">
+              <div class="color-option active" data-color="#00e5ff" data-name="Sian Mavisi" data-price="0" style="background-color: #00e5ff;"></div>
+              <div class="color-option" data-color="#ff124f" data-name="Yarış Qırmızı" data-price="2500" style="background-color: #ff124f;"></div>
+              <div class="color-option" data-color="#ff7b00" data-name="Vulkan Narıncı" data-price="2500" style="background-color: #ff7b00;"></div>
+              <div class="color-option" data-color="#d4af37" data-name="Mat Qızıl" data-price="4500" style="background-color: #d4af37;"></div>
+              <div class="color-option" data-color="#111" data-name="Gecə Qarası" data-price="2000" style="background-color: #111;"></div>
+              <div class="color-option" data-color="#e2e8f0" data-name="Kristal Gümüş" data-price="3000" style="background-color: #e2e8f0;"></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="config-section-title">Disk Dizaynı</h3>
+            <div class="rims-picker-grid">
+              <div class="rim-option active" data-rim="sports" data-price="0">
+                <div class="rim-thumb"><i data-lucide="disc"></i></div>
+                <div class="rim-info">
+                  <h5>KAİ Aeroflow</h5>
+                  <p>Standart (+0 ₼)</p>
+                </div>
+              </div>
+              <div class="rim-option" data-rim="forged" data-price="5000">
+                <div class="rim-thumb" style="color: var(--accent-secondary);"><i data-lucide="sun"></i></div>
+                <div class="rim-info">
+                  <h5>KAİ Vortex Carbon</h5>
+                  <p>Döymə Karbon (+5,000 ₼)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="config-section-title">Premium Paketlər</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <!-- Underglow neon toggle -->
+              <div class="switch-control" id="neonUnderglowSwitch">
+                <div class="switch-label-block">
+                  <h5>Neon Alt İşıqlandırma</h5>
+                  <p>Mavi neon estetika (+1,500 ₼)</p>
+                </div>
+                <div class="switch-toggle-btn"></div>
+              </div>
+
+              <!-- LED Beam headlights toggle -->
+              <div class="switch-control" id="ledBeamSwitch">
+                <div class="switch-label-block">
+                  <h5>Lazer Farlar (Dynamic Beam)</h5>
+                  <p>Gücləndirilmiş ön projektor (+2,800 ₼)</p>
+                </div>
+                <div class="switch-toggle-btn"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Calculation and Action -->
+          <div class="configurator-price-panel">
+            <div class="configurator-price-block">
+              <h4>Təxmini Dəyər</h4>
+              <div class="configurator-price" id="configuratorTotalPrice">212,500 ₼</div>
+            </div>
+            <button class="btn btn-primary" id="orderConfiguredCarBtn">
+              <i data-lucide="shopping-bag"></i> İndi Sifariş Et
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ==========================================
+       TESTIMONIALS / REVIEWS
+       ========================================== -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Müştəri Rəyləri</span>
+        <h2 class="section-title">Bizdən <span>Razı Kalanlar</span></h2>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="rating-stars">
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="review-text">
+            "KAİ Spectre sifariş etdim. Həm maşının dinamikası, həm də salondakı premium münasibət möhtəşəmdir. Bakıda bu səviyyədə xidmət verən ikinci avtomobil brendi yoxdur."
+          </p>
+          <div class="reviewer-profile">
+            <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120" alt="Kamran Qasımov">
+            <div class="reviewer-info">
+              <h4>Kamran Qasımov</h4>
+              <p>Sahibi - KAİ Spectre</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="rating-stars">
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="review-text">
+            "Öz köhnə maşınımı Trade-in vasitəsilə təhvil verib, yeni KAİ Phantom SUV aldım. Qiymətləndirmədən tutmuş sənədləşməyə qədər hər şey çox sürətli və şəffaf keçdi. Təşəkkürlər!"
+          </p>
+          <div class="reviewer-profile">
+            <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120" alt="Leyla Əliyeva">
+            <div class="reviewer-info">
+              <h4>Leyla Əliyeva</h4>
+              <p>Sahibi - KAİ Phantom</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="rating-stars">
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <p class="review-text">
+            "Konfiquratorda yaratdığım Spectre modelini tam zövqümə uyğun yığıb çatdırdılar. Karbon disklər və neon alt işıqlandırma maşına xüsusi aqressivlik qatır."
+          </p>
+          <div class="reviewer-profile">
+            <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120" alt="Fərid Məmmədov">
+            <div class="reviewer-info">
+              <h4>Fərid Məmmədov</h4>
+              <p>Sahibi - KAİ Spectre (Custom)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       FAQ ACCORDION SECTION
+       ========================================== -->
+  <section class="section" id="faq" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Sualınız Var?</span>
+        <h2 class="section-title">Tez-tez Verilən <span>Suallar</span></h2>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3 class="faq-question">KAİ Motors avtomobillərinə hansı zəmanət verilir?</h3>
+            <div class="faq-icon"><i data-lucide="chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Biz bütün avtomobillərimizə 5 il və ya 150,000 km (hansı tez bitərsə) rəsmi zəmanət veririk. Elektrikli modellərimizin batareyasına isə ayrıca 8 il və ya 200,000 km rəsmi zəmanət təqdim olunur.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3 class="faq-question">Azərbaycanda şarj infrastrukturu necə tənzimlənir?</h3>
+            <div class="faq-icon"><i data-lucide="chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Hər satılan elektrikli avtomobil ilə birlikdə eviniz və ya ofisiniz üçün ödənişsiz 22 kW-lik KAI Wallbox şarj cihazı hədiyyə olunur. Həmçinin Bakı və bölgələrdəki sürətli DC şarj stansiyalarımızdan KAI müştəriləri ilk 1 il tamamilə ödənişsiz faydalanırlar.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3 class="faq-question">Custom konfiqurasiya olunmuş avtomobil nə qədər vaxta çatdırılır?</h3>
+            <div class="faq-icon"><i data-lucide="chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Sizin sifarişiniz əsasında fabrikimizdə xüsusi yığılan avtomobillər rəsmiləşdirildikdən sonra 60-90 təqvim günü ərzində Bakıdakı baş salonumuza çatdırılır və bütün gömrük prosedurları tərəfimizdən tamamlanaraq sizə təhvil verilir.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3 class="faq-question">Köhnə avtomobilimi Trade-In vasitəsilə dəyişə bilərəm?</h3>
+            <div class="faq-icon"><i data-lucide="chevron-down"></i></div>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Bəli, markasından və istehsal ilindən asılı olmayaraq istənilən saz vəziyyətdə olan avtomobilinizi qiymətləndirib ondan yeni KAI modelinin alınmasında ilkin ödəniş və ya birbaşa ödəniş kimi istifadə edə bilərsiniz.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       CONTACT & INTERACTIVE LOCATION MAP
+       ========================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Bizimlə Əlaqə</span>
+        <h2 class="section-title">Sizi <span>Gözləyirik</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information List -->
+        <div class="contact-info-panel">
+          <div style="max-width: 480px;">
+            <h3 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; margin-bottom: 16px;">Sualınız var və ya Test Sürüşü İstəyirsiniz?</h3>
+            <p style="color: var(--text-muted); font-size: 15px;">Əlaqə məlumatlarımız vasitəsilə bizə zəng edə, məktub yaza və ya birbaşa Bakıdakı premium salonumuzu ziyarət edə bilərsiniz.</p>
+          </div>
+
+          <div class="contact-card-list">
+            <!-- Card Phone -->
+            <div class="contact-card">
+              <div class="contact-card-icon"><i data-lucide="phone"></i></div>
+              <div class="contact-card-details">
+                <h4>Telefon Nömrəsi</h4>
+                <p><a href="tel:+994125555555">+994 12 555 55 55</a></p>
+                <p><a href="tel:+994509999999">+994 50 999 99 99</a></p>
+              </div>
+            </div>
+
+            <!-- Card Email -->
+            <div class="contact-card">
+              <div class="contact-card-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-card-details">
+                <h4>E-Poçt Ünvanı</h4>
+                <p><a href="mailto:info@kaimotors.az">info@kaimotors.az</a></p>
+                <p><a href="mailto:sales@kaimotors.az">sales@kaimotors.az</a></p>
+              </div>
+            </div>
+
+            <!-- Card Location -->
+            <div class="contact-card">
+              <div class="contact-card-icon"><i data-lucide="map-pin"></i></div>
+              <div class="contact-card-details">
+                <h4>Showroom Ünvanı</h4>
+                <p>Heydər Əliyev Prospekti 115, Bakı, Azərbaycan</p>
+                <p style="font-size: 12px; color: var(--accent-primary); margin-top: 4px; font-weight: 600;"><i data-lucide="clock" style="width: 12px; height: 12px; display: inline; vertical-align: middle; margin-right: 4px;"></i> Hər gün: 09:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulated Vector Interactive Map -->
+        <div class="map-wrapper">
+          <div class="interactive-mock-map">
+            <div class="map-grid-overlay"></div>
+            <!-- River decoration -->
+            <div class="map-river"></div>
+            <!-- Roads -->
+            <div class="map-road map-road-h"></div>
+            <div class="map-road map-road-h2"></div>
+            <div class="map-road map-road-v"></div>
+            <div class="map-road map-road-v2"></div>
+            
+            <!-- Buildings -->
+            <div class="map-building" style="width: 70px; height: 90px; top: 15%; left: 10%;"></div>
+            <div class="map-building" style="width: 90px; height: 50px; top: 20%; left: 45%;"></div>
+            <div class="map-building" style="width: 50px; height: 60px; top: 50%; left: 15%;"></div>
+            <div class="map-building" style="width: 100px; height: 70px; top: 60%; left: 40%;"></div>
+            <div class="map-building" style="width: 80px; height: 80px; top: 45%; left: 75%;"></div>
+            <div class="map-building" style="width: 60px; height: 50px; top: 15%; left: 80%;"></div>
+            
+            <!-- Pin pointing to HQ -->
+            <div class="map-hq-pin" id="mapPin">
+              <div class="pin-wave"></div>
+              <div class="pin-wave-2"></div>
+              <div class="pin-core"></div>
+            </div>
+            
+            <!-- Dynamic map info card on hover -->
+            <div class="map-tooltip" id="mapTooltip">
+              <div style="font-size: 13px; font-weight: 800; color: #000; margin-bottom: 2px;">KAİ Motors Showroom</div>
+              <div style="font-size: 11px; color: #555;">Heydər Əliyev Prospekti 115</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <svg class="footer-brand-logo" viewBox="0 0 500 500" style="color: var(--text-main);">
+            <g fill="currentColor">
+              <path d="M 60 120 L 110 120 L 110 290 L 60 290 Z" />
+              <path d="M 110 205 L 210 120 L 275 120 L 160 215 L 110 205 Z" />
+              <path d="M 150 205 L 265 290 L 200 290 L 110 220 L 110 205 Z" />
+              <path d="M 270 120 L 335 120 L 400 290 L 345 290 L 302.5 175 L 260 290 L 210 290 L 270 120 Z" />
+              <path d="M 410 120 L 460 120 L 460 290 L 410 290 Z" />
+            </g>
+            <text x="250" y="360" font-family="'Outfit', sans-serif" font-size="54" font-weight="900" font-style="italic" letter-spacing="9" text-anchor="middle" fill="currentColor">MOTORS</text>
+          </svg>
+          <p>
+            Mükəmməllik və texnoloji innovasiyaları özündə birləşdirən KAİ Motors, Azərbaycanda lüks və premium avtomobillərin rəsmi satıcısıdır.
+          </p>
+          <div class="social-links">
+            <a href="#" class="btn-icon" style="width: 38px; height: 38px; border-radius: var(--radius-sm);"><i data-lucide="instagram" style="width: 16px; height: 16px;"></i></a>
+            <a href="#" class="btn-icon" style="width: 38px; height: 38px; border-radius: var(--radius-sm);"><i data-lucide="facebook" style="width: 16px; height: 16px;"></i></a>
+            <a href="#" class="btn-icon" style="width: 38px; height: 38px; border-radius: var(--radius-sm);"><i data-lucide="twitter" style="width: 16px; height: 16px;"></i></a>
+            <a href="#" class="btn-icon" style="width: 38px; height: 38px; border-radius: var(--radius-sm);"><i data-lucide="youtube" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Sürətli Keçidlər</h4>
+          <div class="footer-links">
+            <a href="#home" class="footer-link">Ana Səhifə</a>
+            <a href="#catalog" class="footer-link">Avtomobillər</a>
+            <a href="#configurator" class="footer-link">Özün Yarat</a>
+            <a href="#valuator" class="footer-link">Maşınını Sat</a>
+            <a href="#advantages" class="footer-link">Üstünlüklərimiz</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Xidmətlər</h4>
+          <div class="footer-links">
+            <a href="#configurator" class="footer-link">Fərdi Sifariş</a>
+            <a href="#valuator" class="footer-link">Trade-In (Barter)</a>
+            <a href="#contact" class="footer-link">Test Sürüşü</a>
+            <a href="#" class="footer-link">KAI Maliyyə (Kredit)</a>
+            <a href="#" class="footer-link">Servis Xidmətləri</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Yeniliklərdən Xəbərdar Ol</h4>
+          <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+            Yeniliklər, xüsusi kampaniyalar və yeni gələn modellərdən ilk siz xəbər tutun.
+          </p>
+          <form class="newsletter-form" onsubmit="alert('Bülletenə abunə olundu! Təşəkkürlər.'); return false;">
+            <div class="newsletter-input-wrapper">
+              <input type="email" class="newsletter-input" placeholder="E-poçt ünvanınız" required>
+              <button type="submit" class="newsletter-btn">Abunə Ol</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 KAİ Motors. Bütün hüquqlar qorunur.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Məxfilik Siyasəti</a>
+          <a href="#">İstifadə Şərtləri</a>
+          <a href="#">Kuki Ayarları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       SIDE-DRAWERS (Favorites & Bookings Dashboard)
+       ========================================== -->
+  <!-- 1. Favorites Panel Drawer -->
+  <div class="side-panel" id="favoritesPanel">
+    <div class="side-panel-header">
+      <h3 class="side-panel-title">Sevdiyim Avtomobillər</h3>
+      <button class="side-panel-close-btn" id="favoritesCloseBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="side-panel-content" id="favoritesPanelContent">
+      <!-- Dynamic list of favorites filled by JS -->
+    </div>
+    <div class="side-panel-footer">
+      <button class="btn btn-primary" id="bookAllFavoritesBtn" style="width: 100%;">
+        <i data-lucide="calendar"></i> Sürüş Rezerv Et
+      </button>
+    </div>
+  </div>
+
+  <!-- 2. Active Bookings Panel Drawer -->
+  <div class="side-panel" id="bookingsPanel">
+    <div class="side-panel-header">
+      <h3 class="side-panel-title">Rezervasiyalarım</h3>
+      <button class="side-panel-close-btn" id="bookingsCloseBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="side-panel-content" id="bookingsPanelContent">
+      <!-- Dynamic list of bookings filled by JS -->
+    </div>
+    <div class="side-panel-footer">
+      <a href="#contact" class="btn btn-secondary" style="width: 100%; text-align: center;" onclick="document.getElementById('bookingsPanel').classList.remove('open'); document.getElementById('backdrop').classList.remove('active');">Salonla Əlaqə</a>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       MODALS
+       ========================================== -->
+  <!-- 1. Car Details Popup Modal -->
+  <div class="modal" id="detailsModal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="detailsModalTitle">Model Detalları</h3>
+      <button class="modal-close-btn" id="detailsModalCloseBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="details-grid">
+        <!-- Gallery -->
+        <div class="details-gallery">
+          <div class="details-main-img-wrapper">
+            <img class="details-main-img" id="detailsMainImg" src="" alt="Avtomobil">
+          </div>
+          <div class="details-thumb-grid" id="detailsThumbGrid">
+            <!-- Thumbs filled dynamically -->
+          </div>
+        </div>
+
+        <!-- Info and Specs -->
+        <div class="details-info-panel">
+          <span class="car-type" id="detailsType" style="margin-bottom: 8px; display: inline-block;">Elektrik</span>
+          <h3 id="detailsName">KAI Spectre</h3>
+          <div class="details-price" id="detailsPrice">212,500 ₼</div>
+          
+          <div class="details-specs-table">
+            <div class="details-spec-row">
+              <span class="label">0 - 100 km/s</span>
+              <span class="val" id="detailsAccel">2.1 san</span>
+            </div>
+            <div class="details-spec-row">
+              <span class="label">Maksimal Güc</span>
+              <span class="val" id="detailsPower">750 at gücü</span>
+            </div>
+            <div class="details-spec-row">
+              <span class="label">Yürüş Məsafəsi</span>
+              <span class="val" id="detailsRange">650 km</span>
+            </div>
+            <div class="details-spec-row">
+              <span class="label">Buraxılış İli</span>
+              <span class="val" id="detailsYear">2026</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <button class="btn btn-primary" id="detailsBookBtn" style="flex-grow: 1;">
+              <i data-lucide="calendar"></i> Sürüş Rezerv Et
+            </button>
+            <button class="btn-icon" id="detailsFavoriteBtn">
+              <i data-lucide="heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Interactive Multi-Step Test Drive Booking Modal -->
+  <div class="modal" id="bookingWizardModal">
+    <div class="modal-header">
+      <h3 class="modal-title">Test Sürüşü Sifarişi</h3>
+      <button class="modal-close-btn" id="bookingWizardCloseBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="modal-body">
+      <!-- Steps Indicator -->
+      <div class="booking-wizard-steps">
+        <div class="booking-wizard-step-progress" id="wizardProgress"></div>
+        <div class="wizard-step active" data-step="1">
+          <div class="wizard-step-num">1</div>
+          <span class="wizard-step-label">Maşın Seçimi</span>
+        </div>
+        <div class="wizard-step" data-step="2">
+          <div class="wizard-step-num">2</div>
+          <span class="wizard-step-label">Tarix & Saat</span>
+        </div>
+        <div class="wizard-step" data-step="3">
+          <div class="wizard-step-num">3</div>
+          <span class="wizard-step-label">Təsdiq</span>
+        </div>
+      </div>
+
+      <!-- Form Panels -->
+      <form id="bookingWizardForm" onsubmit="return false;">
+        <!-- Step 1 Panel: Car Picker -->
+        <div class="booking-step-panel active" data-step="1">
+          <h4 style="margin-bottom: 16px; font-family: var(--font-display); font-size: 18px;">Sürüş Etmək İstədiyiniz Modeli Seçin:</h4>
+          <div class="booking-car-picker-grid" id="bookingCarPickerGrid">
+            <!-- Dynamic listing of available cars -->
+          </div>
+        </div>
+
+        <!-- Step 2 Panel: Date and Personal Details -->
+        <div class="booking-step-panel" data-step="2">
+          <h4 style="margin-bottom: 20px; font-family: var(--font-display); font-size: 18px;">Əlaqə Məlumatları və Vaxtı Təyin Edin:</h4>
+          <div class="form-grid">
+            <div class="form-control-block">
+              <label for="bookName">Adınız və Soyadınız</label>
+              <input type="text" class="form-input" id="bookName" placeholder="Məs. Əli Məmmədov" required>
+            </div>
+            <div class="form-control-block">
+              <label for="bookPhone">Telefon Nömrəniz</label>
+              <input type="tel" class="form-input" id="bookPhone" placeholder="Məs. +994 50 123 45 67" required>
+            </div>
+            <div class="form-control-block">
+              <label for="bookDate">Tarix</label>
+              <input type="date" class="form-input" id="bookDate" required>
+            </div>
+            <div class="form-control-block">
+              <label for="bookTime">Saat</label>
+              <select class="select-filter" id="bookTime" style="padding: 14px 16px;">
+                <option value="10:00">10:00</option>
+                <option value="11:30">11:30</option>
+                <option value="13:00">13:00</option>
+                <option value="14:30">14:30</option>
+                <option value="16:00">16:00</option>
+                <option value="17:30">17:30</option>
+                <option value="19:00">19:00</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 Panel: Success Virtual Pass Receipt -->
+        <div class="booking-step-panel" data-step="3">
+          <div class="booking-ticket" id="bookingTicket">
+            <!-- Generated ticket output will render here -->
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="wizard-navigation">
+          <button type="button" class="btn btn-secondary" id="wizardPrevBtn" style="visibility: hidden;">
+            <i data-lucide="arrow-left"></i> Geri
+          </button>
+          <button type="button" class="btn btn-primary" id="wizardNextBtn">
+            İrəli <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Comparison Details Modal Table -->
+  <div class="modal" id="compareResultsModal" style="max-width: 1050px;">
+    <div class="modal-header">
+      <h3 class="modal-title">Avtomobillərin Müqayisəsi</h3>
+      <button class="modal-close-btn" id="compareModalCloseBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="modal-body" style="padding: 24px;">
+      <div class="compare-modal-grid" id="compareResultsGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       MAIN JAVASCRIPT FILE
+       ========================================== -->
+  <script src="app.js"></script>
+</body>
+</html>
