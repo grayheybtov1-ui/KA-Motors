@@ -122,13 +122,13 @@
         <h2 class="section-title">KAİ Motors <span>Haqqında</span></h2>
       </div>
 
-      <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center; margin-top: 40px;">
+      <div class="about-grid">
         <!-- Left Side: Showroom Photo -->
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-card); height: 420px;">
+        <div class="about-image-container">
           <img src="about-car.jpg" alt="KAİ Motors VIP Showroom" style="width: 100%; height: 100%; object-fit: cover;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(5,6,10,0) 50%, rgba(5,6,10,0.8) 100%);"></div>
-          <div style="position: absolute; bottom: 30px; left: 30px;">
-            <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-primary); background: rgba(0, 229, 255, 0.1); padding: 6px 14px; border-radius: var(--radius-full); border: 1px solid rgba(0, 229, 255, 0.2);">VIP Bakı Showroom</span>
+          <div class="about-image-overlay"></div>
+          <div class="about-image-badge-wrap">
+            <span class="about-image-badge">VIP Bakı Showroom</span>
           </div>
         </div>
 
@@ -143,18 +143,18 @@
           </p>
 
           <!-- Achievement Numbers Grid -->
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 15px; border-top: 1px solid var(--border-light); padding-top: 30px;">
-            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
-              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">10+</h4>
-              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">İllik Təcrübə</p>
+          <div class="about-stats-grid">
+            <div class="about-stat-card">
+              <h4 class="about-stat-value">10+</h4>
+              <p class="about-stat-label">İllik Təcrübə</p>
             </div>
-            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
-              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">1000+</h4>
-              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">Razı Müştəri</p>
+            <div class="about-stat-card">
+              <h4 class="about-stat-value">1000+</h4>
+              <p class="about-stat-label">Razı Müştəri</p>
             </div>
-            <div style="text-align: center; background: var(--bg-tertiary); border: 1px solid var(--border-light); padding: 18px 10px; border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
-              <h4 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--accent-primary); margin-bottom: 6px;">5 İl</h4>
-              <p style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin: 0;">Rəsmi Zəmanət</p>
+            <div class="about-stat-card">
+              <h4 class="about-stat-value">5 İl</h4>
+              <p class="about-stat-label">Rəsmi Zəmanət</p>
             </div>
           </div>
         </div>
